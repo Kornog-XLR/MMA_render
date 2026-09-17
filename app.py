@@ -5,6 +5,8 @@ app = Dash(__name__,
     use_pages=True,
     external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
+server = app.server
+
 
 sidebar = html.Div([
     html.Img(src='assets/img/logo.png', className="logo"),
