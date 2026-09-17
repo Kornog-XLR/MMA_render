@@ -1,10 +1,12 @@
-from dash import html, dcc, callback, Output, Input
+from dash import html, dcc, callback, Output, Input, register_page
 from app import df
 
 import pandas as pd
 
 #df = pd.read_csv("data/cohorte_combattants_ufcmaster.csv")
 #app = Dash(__name__)
+
+register_page(__name__, name='HEAD 2 HEAD!!!')
 
 var = df['combattant'].unique()
 
@@ -36,6 +38,7 @@ layout = html.Div([
     Output(component_id='h2h-container', component_property='children'),
     Input(component_id='fighter_first', component_property='value'),
     Input(component_id='fighter_second', component_property='value'),
+    suppress_callback_exceptions=True
 )
 def update_comparison(fighter1, fighter2):
     if not fighter1 or not fighter2:

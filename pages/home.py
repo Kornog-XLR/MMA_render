@@ -32,7 +32,8 @@ layout = html.Div([
 
 @callback(
     Output('fighter-info-grid', 'children'),
-    Input('fighter-dropdown', 'value')
+    Input('fighter-dropdown', 'value'),
+    suppress_callback_exceptions=True
 )
 def update_fighter_info(fighter_name):
     if not fighter_name:

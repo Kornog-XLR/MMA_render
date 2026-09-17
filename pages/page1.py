@@ -2,12 +2,11 @@ from dash import Dash, html, dcc, register_page, callback, Input, Output
 import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
-#from app import df
+from app import df
 
-df = pd.read_csv("data/cohorte_combattants_ufcmaster.csv")
+#df = pd.read_csv("data/cohorte_combattants_ufcmaster.csv")
 
-#register_page(__name__, path='/', name='Home')
-app = Dash(__name__)
+register_page(__name__, name='UFC FIGHTERS STATS')
 
 VARIABLES = [
     'taille_cm',
@@ -22,7 +21,7 @@ VARIABLES = [
 
 categories = sorted(df['categorie_debut'].dropna().unique())
 
-app.layout = html.Div([
+layout = html.Div([
 
     dbc.Row([
         dbc.Col([
@@ -90,6 +89,3 @@ def update_graph(categories_sel, x_col, y_col):
     )
     fig.update_layout(margin=dict(t=30, b=10))
     return fig
-
-if __name__ == '__main__':
-    app.run(debug=True)

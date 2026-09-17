@@ -31,4 +31,4 @@ content = html.Div(page_container, className='body')
 app.layout = html.Div([sidebar, content])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
