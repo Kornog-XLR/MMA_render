@@ -13,7 +13,7 @@ server = app.server
 
 
 sidebar = html.Div([
-    html.Img(src='assets/img/logo.png', className="logo"),
+    html.Img(src='assetss/logo.png', className="logo"),
     html.Hr(),
     dbc.Nav([
             dbc.NavLink(
