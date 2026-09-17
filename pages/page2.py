@@ -1,4 +1,5 @@
 from dash import html, register_page
+from app import df
 
 register_page(__name__, name='Page 2')
 

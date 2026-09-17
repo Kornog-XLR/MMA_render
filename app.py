@@ -1,5 +1,9 @@
 from dash import html, Dash, page_registry, page_container
 import dash_bootstrap_components as dbc
+import pandas as pd
+
+# Chargement des données MMA
+df = pd.read_csv("data/cohorte_combattants_ufcmaster.csv")
 
 app = Dash(__name__,
     use_pages=True,
