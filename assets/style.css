@@ -6,18 +6,19 @@
     width: 18rem;
     padding: 2rem 1rem;
     background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
 }
 
 .body {
-    background-color: #ffffff;
-    position:fixed;
     margin-left: 18rem;
-    margin-right: 2rem;
-    padding: 2rem 1rem;
-    width:100%;
-    height:100%;
+    padding: 2rem;
+    background-color: #ffffff;
+    min-height: 100vh;
 }
 
 .logo {
-    width:80%;
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
 }
